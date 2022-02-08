@@ -6,10 +6,14 @@ namespace Exercicio01.ConsoleApp
     {
         static void Main(string[] args)
         {
+            // linhas 9 a 13 = inicio e condicao do while para rodar o programa ate que o usuario deseje parar.
+
             bool fecharApp = false;
 
             while (fecharApp == false)
             {
+                // linhas 17 a 36 = input de dados, conversao de tipos de dados para utilizacao e declaracao de variaveis utilizadas.
+
                 Console.WriteLine("===== Checar soma =====");
                 Console.WriteLine("");
                 Console.WriteLine("Programa para calcular se a soma de A + B resulta menor que C.");
@@ -18,19 +22,20 @@ namespace Exercicio01.ConsoleApp
                 Console.Write("Digite o valor de A: ");
                 string inputA = Console.ReadLine();
                 int inputANum = int.Parse(inputA);
-                Console.WriteLine("");
 
                 Console.Write("Digite o valor de B: ");
                 string inputB = Console.ReadLine();
                 int inputBNum = int.Parse(inputB);
-                Console.WriteLine("");
 
                 Console.Write("Digite o valor de C: ");
                 string inputC = Console.ReadLine();
                 int inputCNum = int.Parse(inputC);
-                Console.WriteLine("");
 
                 int somaAB = inputANum + inputBNum;
+
+                Console.WriteLine("");
+
+                // linhas 40 a 68 = condicoes para cada situacao + output do resultado.
 
                 if (somaAB < inputCNum)
                 {
@@ -62,6 +67,8 @@ namespace Exercicio01.ConsoleApp
                 Console.WriteLine("Aperte ENTER para prosseguir.");
                 Console.ReadLine();
 
+                // linhas 72 a 102 = inicio e condicao do while de menu de escolha do usuario para sair da aplicao ou permanecer rodando a mesma apos o uso.
+
                 bool opcaoValida = false;
 
                 while (opcaoValida == false)
@@ -88,7 +95,8 @@ namespace Exercicio01.ConsoleApp
                         Console.ForegroundColor= ConsoleColor.Red;
                         Console.WriteLine("Opcao invalida, selecione uma opcao valida!");
                         Console.ResetColor();
-                        Console.WriteLine("Aperte ENTER para continuar");
+                        Console.WriteLine("");
+                        Console.WriteLine("Aperte ENTER para prosseguir.");
                         Console.ReadLine();
                         continue;
                     }

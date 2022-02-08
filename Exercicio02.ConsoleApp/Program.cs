@@ -6,11 +6,14 @@ namespace Exercicio02.ConsoleApp
     {
         static void Main(string[] args)
         {
+            // linhas 9 a 13 = inicio e condicao do while para rodar o programa ate que o usuario deseje parar.
 
             bool fecharApp = false;
 
             while (fecharApp == false)
             {
+                // linhas 17 a 33 = input de dados, conversao de tipos de dados para utilizacao e declaracao de variaveis utilizadas.
+
                 Console.WriteLine("===== Ordem Decrescente =====");
                 Console.WriteLine("");
                 Console.WriteLine("Programa para calcular se a soma de A + B resulta menor que C.");
@@ -28,6 +31,8 @@ namespace Exercicio02.ConsoleApp
                 int numThree = int.Parse(inputNumThree);
 
                 Console.WriteLine("");
+
+                // linhas 35 a 82 = condicoes para cada situacao + output do resultado.
 
                 if (numOne == numTwo || numTwo == numThree || numOne == numThree)
                 {
@@ -76,6 +81,8 @@ namespace Exercicio02.ConsoleApp
                 Console.WriteLine("Aperte ENTER para prosseguir.");
                 Console.ReadLine();
 
+                // linhas 86 a 116 = inicio e condicao do while de menu de escolha do usuario para sair da aplicao ou permanecer rodando a mesma apos o uso.
+
                 bool opcaoValida = false;
 
                 while (opcaoValida == false)
@@ -102,7 +109,8 @@ namespace Exercicio02.ConsoleApp
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Opcao invalida, selecione uma opcao valida!");
                         Console.ResetColor();
-                        Console.WriteLine("Aperte ENTER para continuar");
+                        Console.WriteLine("");
+                        Console.WriteLine("Aperte ENTER para prosseguir.");
                         Console.ReadLine();
                         continue;
                     }
