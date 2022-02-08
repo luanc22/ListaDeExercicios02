@@ -12,37 +12,37 @@ namespace Exercicio05.ConsoleApp
 
             while (fecharApp == false)
             {
-                // linhas 17 a 32 = input de dados, conversao de tipos de dados para utilizacao e declaracao de variaveis utilizadas.
+                // linhas 17 a 30 = input de dados, conversao de tipos de dados para utilizacao e declaracao de variaveis utilizadas.
 
                 Console.WriteLine("===== Checar Numeros Inteiros =====");
                 Console.WriteLine("");
                 Console.WriteLine("Programa para identificar se dois numeros inteiros sao iguais.");
                 Console.WriteLine("");
 
-                Console.Write("Digite o primeiro numero: ");
+                Console.Write("Digite o primeiro numero que sera o valor de A: ");
                 string inputNumOne = Console.ReadLine();
-                Console.Write("Digite o segundo numero: ");
+                Console.Write("Digite o segundo numero que sera o valor de B: ");
                 string inputNumTwo = Console.ReadLine();
 
-                int numOne = int.Parse(inputNumOne);
-                int numTwo = int.Parse(inputNumTwo);
-                int somaNum = numOne + numTwo;
-                int multNum = numOne * numTwo;
+                int numOneA = int.Parse(inputNumOne);
+                int numTwoB = int.Parse(inputNumTwo);
 
                 Console.WriteLine("");
 
-                // linhas 36 a 51 = condicoes para cada situacao + output do resultado.
+                // linhas 34 a 51 = condicoes para cada situacao + output do resultado.
 
-                if (numOne == numTwo)
+                if (numOneA == numTwoB)
                 {
+                    int somaNumC = numOneA + numTwoB;
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Ambos os valores sao iguais, entao a soma deles fica: {0}.", somaNum);
+                    Console.WriteLine("Ambos os valores de A e B sao iguais, entao a soma deles no valor de C fica: {0}.", somaNumC);
                     Console.ResetColor();
                 }
                 else
                 {
+                    int multNumC = numOneA * numTwoB;
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Valores diferentes, entao sua multiplicacao fica: {0}.", multNum);
+                    Console.WriteLine("A e B tem valores diferentes, entao sua multiplicacao no valor de C fica: {0}.", multNumC);
                     Console.ResetColor();
                 }
 
